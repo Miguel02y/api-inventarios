@@ -18,4 +18,4 @@ const InventarioSchema = Schema({
     fechaActualizacion: { type: Date, requiered: true}
 });
 
-module.exports = model('Inventario', InventarioSchema);s
+module.exports = model('Inventario', InventarioSchema);

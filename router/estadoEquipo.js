@@ -1,10 +1,10 @@
-const { Router } = require('express');
+// const { Router } = require('express');
 const EstadoEquipo = require('../models/EstadoEquipo');
 const { validationResult, check } = require('express-validator');
 const { validarJWT } = require('../middleware/validar-jwt');
 const { validarRolAdmin } = require('../middleware/validar-rol-admin');
 
-
+/*
 const router = Router();
 
 //get method route
@@ -51,4 +51,4 @@ router.post('/',[ validarJWT, validarRolAdmin ],[
     
   });
 
-  module.exports = router;
+  module.exports = router;*/

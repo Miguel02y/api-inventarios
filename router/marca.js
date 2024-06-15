@@ -1,9 +1,9 @@
-const { Router } = require('express');
+// const { Router } = require('express');
 const Marca = require('../models/Marca');
 const { validationResult, check } = require('express-validator');
 const { validarJWT } = require('../middleware/validar-jwt');
 const { validarRolAdmin } = require('../middleware/validar-rol-admin');
-
+/*
 
 const router = Router();
 
@@ -52,3 +52,4 @@ router.post('/',[ validarJWT, validarRolAdmin],[
   });
 
   module.exports = router;
+  */

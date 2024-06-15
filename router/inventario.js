@@ -1,11 +1,11 @@
-const { Router } = require('express');
+// const { Router } = require('express');
 const Inventario = require('../models/Inventario');
 const { validationResult, check } = require('express-validator');
 const bycript = require('bcryptjs');
 const estadoEquipo = require('../models/EstadoEquipo');
 const { validarJWT } = require('../middleware/validar-jwt');
 const { validarRolAdmin } = require('../middleware/validar-rol-admin');
-
+/*
 const router = Router();
 
 //get method route
@@ -88,4 +88,4 @@ router.post('/',[ validarJWT, validarRolAdmin ][
     
   });
 
-  module.exports = router;
+  module.exports = router;*/

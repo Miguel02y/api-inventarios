@@ -8,7 +8,7 @@ const { validarRolAdmin } = require('../middleware/validar-rol-admin');
 const router = Router();
 
 //get method route
-router.get('/',[ validarJWT , validarRolAdmin], async function (req, res) {
+router.get('/ObtenerUsuarios',/*[ validarJWT , validarRolAdmin],*/ async function (req, res) {
 
     try {
         const usuarios = await Usuario.find() //select * from usuarios;
@@ -21,7 +21,7 @@ router.get('/',[ validarJWT , validarRolAdmin], async function (req, res) {
 });
 
 // POST method route
-router.post('/',[ validarJWT , validarRolAdmin][
+router.post('/CrearUsuario',/*[ validarJWT , validarRolAdmin]*/[
     check('nombre', 'invalid.nombre').not().isEmpty(),
     check('email', 'invalid.email').isEmail(),
     check('estado', 'invalid.estado').isIn(['Activo' , 'Inactivo']),

@@ -1,11 +1,11 @@
-// const { Router } = require('express');
+const { Router } = require('express');
 const Inventario = require('../models/Inventario');
 const { validationResult, check } = require('express-validator');
 const bycript = require('bcryptjs');
 const estadoEquipo = require('../models/EstadoEquipo');
 const { validarJWT } = require('../middleware/validar-jwt');
 const { validarRolAdmin } = require('../middleware/validar-rol-admin');
-/*
+
 const router = Router();
 
 //get method route
@@ -35,7 +35,7 @@ router.get('/',[ validarJWT ], async function (req, res) {
 });
 
 // POST method route
-router.post('/',[ validarJWT, validarRolAdmin ][
+router.post('/',[ validarJWT, validarRolAdmin ],[
     check('serial', 'invalid.serial').not().isEmpty(),
     check('modelo', 'invalid.modelo').not().isEmpty(),
     check('descripcion', 'invalid.descripcion').not().isEmpty(),
@@ -88,4 +88,4 @@ router.post('/',[ validarJWT, validarRolAdmin ][
     
   });
 
-  module.exports = router;*/
+  module.exports = router;

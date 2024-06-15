@@ -1,10 +1,10 @@
-//const { Router } = require('express');
+const { Router } = require('express');
 const Usuario = require('../models/Usuario');
 const { validationResult, check } = require('express-validator');
 const bycript = require('bcryptjs');
 const { generarJWT } = require('../helpers/jwt');
 //const {} require = ('../helpers/jwt');
-/*
+
 const router = Router();
 
 
@@ -47,4 +47,4 @@ router.post('/',[
     
   });
 
-  module.exports = router;*/
+  module.exports = router;

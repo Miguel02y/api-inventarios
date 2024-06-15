@@ -5,10 +5,11 @@ const bycript = require('bcryptjs');
 const { validarJWT } = require ('../middleware/validar-jwt');
 const { validarRolAdmin } = require('../middleware/validar-rol-admin');
 
+
 const router = Router();
 
 //get method route
-router.get('/ObtenerUsuarios',/*[ validarJWT , validarRolAdmin],*/ async function (req, res) {
+router.get('/ObtenerUsuarios',[ validarJWT , validarRolAdmin], async function (req, res) {
 
     try {
         const usuarios = await Usuario.find() //select * from usuarios;
@@ -21,7 +22,7 @@ router.get('/ObtenerUsuarios',/*[ validarJWT , validarRolAdmin],*/ async functio
 });
 
 // POST method route
-router.post('/CrearUsuario',/*[ validarJWT , validarRolAdmin]*/[
+router.post('/',[ validarJWT , validarRolAdmin],[
     check('nombre', 'invalid.nombre').not().isEmpty(),
     check('email', 'invalid.email').isEmail(),
     check('estado', 'invalid.estado').isIn(['Activo' , 'Inactivo']),
@@ -63,4 +64,4 @@ router.post('/CrearUsuario',/*[ validarJWT , validarRolAdmin]*/[
     
   });
 
-  module.exports = router;
+module.exports = router ;

@@ -4,7 +4,7 @@ require('dotenv').config();
 //const { route } = require('./router/usuario');
 //const router = require('./router/usuario');
 const app = express();
-//const router = express()
+const router = express.Router()
 const port = process.env.PORT;
 
 getConnection();
@@ -17,8 +17,6 @@ app.use('/marca', require('./router/marca'));
 app.use('/estado-equipo', require('./router/estadoEquipo'));
 app.use('/tipo-equipo', require('./router/tipoEquipo'));
 app.use('/inventario', require('./router/inventario'));
-
-
 
 
 app.listen(port, () => {
